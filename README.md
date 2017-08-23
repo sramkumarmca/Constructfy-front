@@ -2,8 +2,7 @@
 
 
 
-## Angular 2 version
-Here you can find Angular2 based version: [ng2-admin](https://github.com/akveo/ng2-admin).
+
 
 ### Documentation
 
