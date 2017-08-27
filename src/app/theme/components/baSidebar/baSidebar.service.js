@@ -66,7 +66,8 @@
         function defineMenuItemStates() {
           return $state.get()
             .filter(function(s) {
-              return s.sidebarMeta;
+                //return s.sidebarMeta;
+                return !angular.isUndefined(s.constructfy);
             })
             .map(function(s) {
               var meta = s.sidebarMeta;
