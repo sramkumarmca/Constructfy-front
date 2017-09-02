@@ -19,7 +19,7 @@
         url: '/constructfy',
         template: '<ui-view  autoscroll="true" autoscroll-body-top></ui-view>',
         abstract: true,
-        title: 'Coasting',
+        title: 'Costing',
         sidebarMeta: {
           icon: 'ion-gear-a',
           order: 100,

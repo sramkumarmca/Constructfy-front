@@ -14,6 +14,7 @@
       .state('main.constructfy.createProject', {
           url: '/createProject',
           templateUrl: 'app/pages/constructfy/createProject/createProject.html',
+          controller: 'createProjectCtrl',
           title: 'Create Project',
         sidebarMeta: {
           icon: 'ion-ios-pulse',
