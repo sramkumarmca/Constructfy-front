@@ -101,50 +101,50 @@
          ba-panel-title="Tower/Block"
          ba-panel-class="with-scroll">
   
-            <!-- tree -->
-            <div class="row">
-                <div class="col-sm-7">
-                    <table ui-tree id="tree-root" class="table table-responsive table-bordered" border="0">
-                        <thead>
-                            <tr class="black-muted-bg">
-                                <th style="align-content:center">
-                                    <a class="btn btn-primary btn-xs" ng-click="newTower()"><span class="glyphicon glyphicon-plus"></span>  Add more </a> 
-                                </th>
-                                <th>
-                                        <input class="form-control input-sm" ng-model="node.title" type="text" placeholder="Enter Tower/Block" style="padding-top :10px;text-align: left;">
-                                </th>
-                                <th>
-                                     <a class="pull-right btn btn-primary btn-xs" data-nodrag ng-click="newFloor()" style="margin-right: 8px;">
-                                            Floor <span class="glyphicon glyphicon-plus"></span>
-                                      </a>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody ui-tree-nodes ng-model="data">
-                            <tr ng-repeat="node in data" ui-tree-node >
-                                <td>
-                                    <div style="margin-top:10px">
-                                        <i class="glyphicon glyphicon-resize-vertical"></i>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="form-group" style="margin-top:10px">
-                                        <input class="form-control input-sm" ng-model="node.title" type="text" style="padding-top :10px;">
-                                    </div>
-                                </td>
-                                <td style="margin-top:10px">
-                                    <div style="margin-top:10px">
-                                        <a class="pull-right btn btn-danger btn-xs" data-nodrag ng-click="remove(this)" style="margin-right: 8px;">
-                                            <span class="glyphicon glyphicon-remove"></span>
-                                        </a>
-                                    </div>
-                               </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <!--tree end-->
+        <!-- tree -->
+        <div class="row" ng-repeat="tower in data">
+        <div class="col-sm-7">
+            <table ui-tree id="tree-root" class="table table-responsive table-bordered" border="0">
+                <thead>
+                    <tr class="black-muted-bg">
+                        <th style="align-content:center">
+                            <a class="btn btn-primary btn-xs" ng-click="newTower()"><span class="glyphicon glyphicon-plus"></span>  Add more </a>
+                        </th>
+                        <th>
+                                <input class="form-control input-sm" ng-model="tower.name" type="text" placeholder="Enter Tower/Block" style="padding-top :10px;text-align: left;">
+                        </th>
+                        <th>
+                             <a class="pull-right btn btn-primary btn-xs" data-nodrag ng-click="newFloor(tower.id)" style="margin-right: 8px;">
+                                    Floor <span class="glyphicon glyphicon-plus"></span>
+                              </a>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody ui-tree-nodes ng-model="tower.floor">
+                    <tr ng-repeat="node in tower.floor" ui-tree-node >
+                        <td>
+                            <div style="margin-top:10px">
+                                <i class="glyphicon glyphicon-resize-vertical"></i>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group" style="margin-top:10px">
+                                <input class="form-control input-sm" ng-model="node.floorName" type="text" style="padding-top :10px;">
+                            </div>
+                        </td>
+                        <td style="margin-top:10px">
+                            <div style="margin-top:10px">
+                                <a class="pull-right btn btn-danger btn-xs" data-nodrag ng-click="remove(this)" style="margin-right: 8px;">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </a>
+                            </div>
+                       </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>
+        <!--tree end-->
       
     </div>
 </div>
