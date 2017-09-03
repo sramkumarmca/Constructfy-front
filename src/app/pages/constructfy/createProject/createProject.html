@@ -106,9 +106,10 @@
         <div class="col-sm-7">
             <table ui-tree id="tree-root" class="table table-responsive table-bordered" border="0">
                 <thead>
-                    <tr class="black-muted-bg">
-                        <th style="align-content:center">
-                            <a class="btn btn-primary btn-xs" ng-click="newTower()"><span class="glyphicon glyphicon-plus"></span>  Add more </a>
+                    <tr class="black-muted-bg" >
+                        <th align="left" width="100px">
+                            <a class="btn btn-primary btn-xs" ng-click="newTower()"><span class="glyphicon glyphicon-plus"></span>  </a>
+                            <a ng-show="tower.id!=1" class="btn btn-primary btn-xs" ng-click="deleteTower(tower.id)"><span class="glyphicon glyphicon-trash"></span></a>
                         </th>
                         <th>
                                 <input class="form-control input-sm" ng-model="tower.name" type="text" placeholder="Enter Tower/Block" style="padding-top :10px;text-align: left;">

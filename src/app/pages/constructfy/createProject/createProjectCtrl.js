@@ -37,7 +37,6 @@
       };
 
       $scope.newFloor = function (towerId) {
-          alert(towerId);
           _.forEach($scope.data, function (value,index ) {
               if (value.id === towerId)
               {
@@ -60,6 +59,10 @@
                 name: 'Tower ' + (nodeData + 1)
             });
        
+      };
+      
+      $scope.deleteTower = function (towerId) {
+          $scope.data.splice(towerId-1);
       };
 
       $scope.data = [{ 'id': 1, 'name': 'Tower1', 'floor': [{ 'floorId': 1, 'floorName': 'floor1' }, { 'floorId': 2, 'floorName': 'floor2' }] }
