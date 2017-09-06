@@ -6,7 +6,9 @@
   'use strict';
 
   angular.module('BlurAdmin.pages.constructfy', [
-      'BlurAdmin.pages.constructfy.createProject'
+      'BlurAdmin.pages.constructfy.createProject',
+      'BlurAdmin.pages.constructfy.viewProject',
+      'BlurAdmin.pages.constructfy.viewSummary'
       //'BlurAdmin.pages.components.timeline',
       //'BlurAdmin.pages.components.tree',
     ])

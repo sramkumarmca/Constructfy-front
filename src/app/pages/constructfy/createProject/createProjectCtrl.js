@@ -9,7 +9,7 @@
       .controller('createProjectCtrl', createProjectCtrl);
 
   /** @ngInject */
-  function createProjectCtrl($scope) {
+  function createProjectCtrl($scope,$state) {
   
       //  var vm = this;
       // $scope.names = ["Block-x", "Tower-Y"];
@@ -71,5 +71,62 @@
  
       //tree
 
+
+      //external works
+      $scope.users = [
+    {
+        "id": 1,
+        "name": "Esther Vang",
+        "status": 4,
+        "group": 3
+    },
+    {
+        "id": 2,
+        "name": "Leah Freeman",
+        "status": 3,
+        "group": 1
+    },
+    {
+        "id": 3,
+        "name": "Mathews Simpson",
+        "status": 3,
+        "group": 2
+    },
+      ];
+
+      $scope.removeUser = function (index) {
+          $scope.users.splice(index, 1);
+      };
+
+      $scope.addUser = function () {
+          $scope.inserted = {
+              id: $scope.users.length + 1,
+              name: '',
+              status: null,
+              group: null
+          };
+          $scope.users.push($scope.inserted);
+      };
+
+      $scope.externalSelect = [{ "id": 1, "name": "Sewer manholes" }, { "id": 2, "name": "manholes" }, { "id": 3, "name": "Custom" }];
+      $scope.choice = null;
+
+      $scope.customText = false;
+      $scope.selectedTemplate = function (id) {
+          alert(id);
+          if(id===3)
+          {
+              $scope.customText = true;
+          }
+      };
+
+      //external works ens
+
+
+      //save button
+      $scope.viewProject = function () {
+          $state.go('main.constructfy.viewProject');
+      };
+      //
   }
 })();
