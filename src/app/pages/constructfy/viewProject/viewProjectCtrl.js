@@ -9,12 +9,16 @@
       .controller('viewProjectCtrl', viewProjectCtrl);
 
   /** @ngInject */
-  function viewProjectCtrl($scope) {
+  function viewProjectCtrl($scope,$state) {
   
-      //  var vm = this;
-      // $scope.names = ["Block-x", "Tower-Y"];
-
     
+      $scope.viewProject = function () {
+          $state.go('main.constructfy.createProject');
+      };
+
+      $scope.viewSummary = function () {
+          $state.go('main.constructfy.viewSummary');
+      };
 
   }
 })();

@@ -5,7 +5,44 @@
              ba-panel-class="with-scroll">
 
             <div class="row">
-            under const..
+                <div class="col-sm-12">
+                    <table class="table table-bordered table-hover table-condensed">
+                        <tr>
+                            <td></td>
+                            <td>Project</td>
+                            <td>
+                                start date
+                            </td>
+                            <td>
+                                completion date
+                            </td>
+                            <td>
+                                Location
+                            </td>
+                            <td>Actions</td>
+                        </tr>
+                        <tr ng-repeat="user in users" class="editable-row">
+                            <td>
+                                {{$index}}
+                            </td>
+                            <td class="select-td">
+                                <span editable-select="user.status" e-name="status" e-form="rowform" e-selectpicker
+                                      e-ng-options="s.value as s.text for s in statuses">
+                                    {{ showStatus(user) }}
+                                </span>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <div class="buttons" >
+                                    <button class="btn btn-primary  btn-xs" ng-click="viewProject()">view</button>
+                                    <button class="btn btn-primary  btn-xs" ng-click="viewSummary()">summary</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
           
         </div>

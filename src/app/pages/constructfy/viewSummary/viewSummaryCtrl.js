@@ -9,12 +9,15 @@
       .controller('viewSummaryCtrl', viewSummaryCtrl);
 
   /** @ngInject */
-    function viewSummaryCtrl($scope) {
+    function viewSummaryCtrl($scope, $state) {
   
       //  var vm = this;
       // $scope.names = ["Block-x", "Tower-Y"];
 
     
 
+      $scope.viewDetail = function () {
+          $state.go('main.constructfy.detail');
+      };
   }
 })();
