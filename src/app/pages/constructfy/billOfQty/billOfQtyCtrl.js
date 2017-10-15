@@ -5,11 +5,11 @@
 (function () {
   'use strict';
 
-    angular.module('BlurAdmin.pages.constructfy.viewSummary')
-      .controller('viewSummaryCtrl', viewSummaryCtrl);
+  angular.module('BlurAdmin.pages.constructfy.billOfQty')
+      .controller('billOfQtyCtrl', billOfQtyCtrl);
 
   /** @ngInject */
-    function viewSummaryCtrl($scope, $state) {
+  function billOfQtyCtrl($scope, $state) {
   
       //  var vm = this;
       // $scope.names = ["Block-x", "Tower-Y"];
