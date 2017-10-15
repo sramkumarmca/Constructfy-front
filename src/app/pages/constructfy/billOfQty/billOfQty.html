@@ -4,92 +4,81 @@
              ba-panel-title="billOfQty"
              ba-panel-class="with-scroll">
 
-            <div class="row">
-                <div class="col-sm-12">
-                    <table class="table table-bordered table-hover table-condensed">
-                        <tr class="black-muted-bg">
-                            <th>DIVISION NO.</th> 					  	  	  	   	      	                    	          
-                            <th>DESCRIPTION OF THE WORK	UNIT</th>
-                            <th>QTY</th>
-                            <th>UNIT RATE(RS)</th>
-                            <th>TOTAL AMOUNT(RS)</th>
-                            <th>% AGE</th>
-                            <th>CONTRACT BREAKDOWN QTY</th>
-                            <th>WORKDONE P'AGE(%)</th>
-                            <th>WORKDONE ITEM(DATE)</th>
-                            <th>WORKDONE BREAKDOWN QTY</th>
-                            <th>WORKDONE AMOUNT (RS)</th>
-                            <th>WORK DONE TOTAL % AGE</th>
-                            <th></th>
-                        </tr>
-                        <tr class="editable-row">
-                            <td>01</td>
-                            <td>DIVISION 01 - GENERAL REQUIREMENTS</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                                <div class="buttons">
-                                    <button class="btn btn-primary  btn-xs" ng-click="viewDetail()">detail</button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="editable-row">
-                            <td>02</td>
-                            <td>DIVISION 02 - SITE CONSTRUCTION</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                                <div class="buttons">
-                                    <button class="btn btn-primary  btn-xs" ng-click="viewDetail()">detail</button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="editable-row">
-                            <td colspan="10">TOTAL FOR STRCTURAL, ARCHITECTURAL & EXTERNAL  WORKS</td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                               
-                            </td>
-                        </tr>
-                        <tr class="editable-row">
-                            <td>15</td>
-                            <td>DIVISION 15 - MECHANICAL WORKS</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                                <div class="buttons">
-                                    <button class="btn btn-primary  btn-xs" ng-click="viewDetail()">detail</button>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
+            <div class="add-row-editable-table">
+                <button class="btn btn-primary" ng-click="addUser()">Add row</button>
             </div>
+            <table class="table table-bordered table-hover table-condensed">
+                <tr>
+                    <td></td>
+                    <td>Description</td>
+                    <td>Amount</td>
+                    <td>Start Date</td>
+                    <td>End Date</td>
+                    <td>Cost For</td>
+                    <td>Actions</td>
+                </tr>
+                <tr ng-repeat="user in users" class="editable-row">
+                    <td>
+                        {{$index}}
+                    </td>
+                    <td>
+                        <span editable-text="user.name" e-name="name" e-form="rowform" e-required>
+                            {{ user.name || 'empty' }}
+                        </span>
+                    </td>
+                    <td>
+                        <span editable-text="user.name" e-name="name" e-form="rowform" e-required>
+                            {{ user.name || 'empty' }}
+                        </span>
+                    </td>
+                    <td >
+                      start date
+                    </td>
+                    <td>
+                        end date
+                    </td>
+                    <!--<td class="select-td">
+                        <span editable-select="user.group" e-name="group" onshow="loadGroups()" e-form="rowform" e-selectpicker
+                              e-ng-options="g.id as g.text for g in groups">
+                            {{ showGroup(user) }}
+                        </span>
+                    </td>-->
+                    <td>
+                        <select class="form-control">
+                            <option>Primiliries</option>
+                            <option>Site Works</option>
+                            <option>Sub Structure/Super Structure</option>
+                        </select>
+                    </td>
+                    <td>
+                        <form editable-form name="rowform" ng-show="rowform.$visible" class="form-buttons form-inline"
+                              shown="inserted == user">
+                            <button type="submit" ng-disabled="rowform.$waiting" class="btn btn-primary editable-table-button btn-xs">
+                                Save
+                            </button>
+                            <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="btn btn-default editable-table-button btn-xs">
+                                Cancel
+                            </button>
+                        </form>
+                        <div class="buttons" ng-show="!rowform.$visible">
+                            <button class="btn btn-primary editable-table-button btn-xs" ng-click="rowform.$show()">Edit</button>
+                            <button class="btn btn-warning editable-table-button btn-xs" ng-click="viewBreakdown()">Breakdown</button>
+                            <button class="btn btn-danger editable-table-button btn-xs" ng-click="removeUser($index)">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Total:20000</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+
+
           
         </div>
     </div>

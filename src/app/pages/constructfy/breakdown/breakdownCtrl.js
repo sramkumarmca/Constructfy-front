@@ -5,11 +5,11 @@
 (function () {
   'use strict';
 
-    angular.module('BlurAdmin.pages.constructfy.detail')
-      .controller('detailCtrl', detailCtrl);
+    angular.module('BlurAdmin.pages.constructfy.breakdown')
+        .controller('breakdownCtrl', breakdownCtrl);
 
   /** @ngInject */
-    function detailCtrl($scope) {
+    function breakdownCtrl($scope) {
   
       //  var vm = this;
       // $scope.names = ["Block-x", "Tower-Y"];

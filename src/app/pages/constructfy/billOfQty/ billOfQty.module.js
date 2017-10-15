@@ -15,7 +15,7 @@
             url: '/billOfQty',
             templateUrl: 'app/pages/constructfy/billOfQty/billOfQty.html',
           controller: 'billOfQtyCtrl',
-          title: 'bill Of Qty',
+          title: 'Bill Of Qty',
         sidebarMeta: {
           icon: 'ion-ios-pulse',
           order: 100,

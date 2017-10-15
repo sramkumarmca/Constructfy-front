@@ -16,8 +16,8 @@
 
     
 
-      $scope.viewDetail = function () {
-          $state.go('main.constructfy.detail');
+      $scope.viewBreakdown = function () {
+          $state.go('main.constructfy.breakdown');
       };
   }
 })();

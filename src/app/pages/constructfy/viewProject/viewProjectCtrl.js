@@ -16,8 +16,8 @@
           $state.go('main.constructfy.createProject');
       };
 
-      $scope.viewSummary = function () {
-          $state.go('main.constructfy.viewSummary');
+      $scope.viewBOQ = function () {
+          $state.go('main.constructfy.billOfQty');
       };
 
   }
