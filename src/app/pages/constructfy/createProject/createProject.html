@@ -19,24 +19,22 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-4">
                     <div class="form-group" >
                         <label for="inputFirstName">Start date</label>
                         <input type="date" ng-model="startDate" class="form-control" />
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-4">
                     <div class="form-group">
                         <label for="inputLastName">Completion date</label>
                         <input type="date" ng-model="completionDate" class="form-control" />
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-4">
                     <div class="form-group">
                         <label for="inputFirstName">Project duration</label>
-                        <input type="text"  readonly class="form-control" ng-model="projectDuration" placeholder="In yrs month weeks and days">
+                        <input type="text" readonly class="form-control" ng-model="projectDuration" placeholder="In yrs month weeks and days">
                     </div>
                 </div>
             </div>
@@ -252,68 +250,6 @@
       </div>
 </div>
 <!-- External works end -->
-
-    <!-- Division/BILL -->
-    <div class="row">
-        <div class="col-md-12"
-             ba-panel
-             ba-panel-title="Division/Bill"
-             ba-panel-class="with-scroll">
-         
-            <div class="row">
-                <div class="col-md-4">
-                    <label class="checkbox-inline custom-checkbox nowrap">
-                        <input type="checkbox" id="inlineCheckbox01" value="option1">
-                        <span>Include 16 division(1. general 2.site constru..)</span>
-                    </label>
-                </div>
-            </div>
-            <br />
-            <div class="row">
-                    <div class="col-sm-6">
-                        <table class="table table-bordered table-hover table-condensed">
-                            <tr>
-                                <td></td>
-                                <td>Bill</td>
-                 
-                                <td>Actions</td>
-                            </tr>
-                            <tr ng-repeat="user in users" class="editable-row">
-                                <td>
-                                    {{$index}}
-                                </td>
-                                <td class="select-td">
-                                    <span editable-select="user.status" e-name="status" e-form="rowform" e-selectpicker
-                                          e-ng-options="s.value as s.text for s in statuses">
-                                        {{ showStatus(user) }}
-                                    </span>
-                                </td>
-                                <td>
-                                    <form editable-form name="rowform" ng-show="rowform.$visible" class="form-buttons form-inline"
-                                          shown="inserted == user">
-                                        <button type="submit" ng-disabled="rowform.$waiting" class="btn btn-primary editable-table-button btn-xs">
-                                            Save
-                                        </button>
-                                        <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="btn btn-default editable-table-button btn-xs">
-                                            Cancel
-                                        </button>
-                                    </form>
-                                    <div class="buttons" ng-show="!rowform.$visible">
-                                        <button class="btn btn-primary editable-table-button btn-xs" ng-click="rowform.$show()">Edit</button>
-                                        <button class="btn btn-danger editable-table-button btn-xs" ng-click="removeUser($index)">Delete</button>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-            </div>
-            <br/>
-            <div class="row">
-                <button class="btn btn-primary btn-xs" ng-click="addBills()">Add Bills</button>
-            </div>
-         </div>
-    </div>
-    <!-- Division/BILL end -->
 
 
 <!--save button-->

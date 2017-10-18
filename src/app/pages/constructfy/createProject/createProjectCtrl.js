@@ -23,10 +23,10 @@
       // $scope.selectedbuildingType = $scope.buildingType.car01;
 
       //date
-      var a = moment([2007, 0, 29]);
-      var b = moment([2007, 0, 28]);
+      //var a = moment([2007, 0, 29]);
+      //var b = moment([2007, 0, 28]);
      
-      $scope.projectDuration = a.diff(b, 'days');
+      //$scope.projectDuration = a.diff(b, 'days');
       //
 
 
