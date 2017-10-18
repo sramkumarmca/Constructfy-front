@@ -62,7 +62,7 @@
                         </form>
                         <div class="buttons" ng-show="!rowform.$visible">
                             <button class="btn btn-primary editable-table-button btn-xs" ng-click="rowform.$show()">Edit</button>
-                            <button class="btn btn-warning editable-table-button btn-xs" ng-click="viewBreakdown()">Breakdown</button>
+                            <button class="btn btn-warning editable-table-button btn-xs" ng-click="viewBreakdown($index)">Breakdown</button>
                             <button class="btn btn-danger editable-table-button btn-xs" ng-click="removeUser($index)">Delete</button>
                         </div>
                     </td>

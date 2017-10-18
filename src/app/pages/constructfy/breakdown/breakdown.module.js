@@ -12,7 +12,7 @@
   function routeConfig($stateProvider) {
     $stateProvider
         .state('main.constructfy.breakdown', {
-            url: '/breakdown',
+            url: '/breakdown/:divisionId',
             templateUrl: 'app/pages/constructfy/breakdown/breakdown.html',
             controller: 'breakdownCtrl',
             title: 'Breakdown',

@@ -4,13 +4,29 @@
              ba-panel-title="Details"
              ba-panel-class="with-scroll">
 
-            <div class="row">
-              there is three portion
-                1. primilieries --load the primiliry dropdown-division 1
-                2.site works-load division 2 dropdown 
-                3.sub structure /super structure --- load the block and towers-floors
-            </div>
           
+
+            <div ng-switch="divisionId">
+                <div ng-switch-when="0">
+                    <h1>Primiliries</h1>
+                    <p>.....</p>
+                </div>
+                <div ng-switch-when="1">
+                    <h1>Site Works</h1>
+                    <p>.....</p>
+                </div>
+                <div ng-switch-when="2">
+                    <h1>Sub Structure/Super Structure</h1>
+                    <p>...</p>
+                </div>
+                <div ng-switch-default>
+                    <h1>Sub Structure/Super Structure</h1>
+                    <p>.......</p>
+                </div>
+            </div>
+
+
+
         </div>
     </div>
 

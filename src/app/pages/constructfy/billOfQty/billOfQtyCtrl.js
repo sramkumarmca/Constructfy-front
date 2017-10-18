@@ -16,8 +16,10 @@
 
     
 
-      $scope.viewBreakdown = function () {
-          $state.go('main.constructfy.breakdown');
+      $scope.viewBreakdown = function (id) {
+          
+          $state.go('main.constructfy.breakdown', { divisionId: id });
+         // $state.go('main.constructfy.breakdown');
       };
   }
 })();

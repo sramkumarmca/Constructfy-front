@@ -9,10 +9,12 @@
         .controller('breakdownCtrl', breakdownCtrl);
 
   /** @ngInject */
-    function breakdownCtrl($scope) {
+    function breakdownCtrl($scope, $stateParams) {
   
       //  var vm = this;
       // $scope.names = ["Block-x", "Tower-Y"];
+
+        $scope.divisionId = $stateParams.divisionId;
 
 
   }
