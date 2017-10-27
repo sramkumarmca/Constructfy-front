@@ -6,7 +6,7 @@
 
           
 
-            <div ng-switch="divisionId">
+            <!--<div ng-switch="divisionId">
                 <div ng-switch-when="0">
                     <h1>Primiliries</h1>
                     <p>.....</p>
@@ -23,9 +23,51 @@
                     <h1>Sub Structure/Super Structure</h1>
                     <p>.......</p>
                 </div>
+            </div>-->
+
+            <!--<h3 class="with-line">Location</h3>-->
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="horizontal-scroll">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th colspan="2" class="align-centre">Location</th>
+                                    <th colspan="3" class="align-centre">Material</th>
+                                    <th></th>
+                                </tr>
+                                <tr style="height:40px">
+                                    <th ><select class="form-control" title="Standard Select" selectpicker>
+                                            <option>San Francisco</option>
+                                            <option>London</option>
+                                            <option>Minsk</option>
+                                            <option>Tokio</option>
+                                        </select>
+                                    </th>
+                                    <th>Browser</th>
+                                    <th >Visits</th>
+                                    <th >Purchases</th>
+                                    <th >%</th>
+                                    <th>go button</th>
+                                </tr>
+                            </thead>
+                            <!--<tbody>
+                                <tr ng-repeat="item in metricsTableData">
+                                    <td><img ng-src="{{::( item.image | appImage )}}" width="20" height="20"></td>
+                                    <td ng-class="nowrap">{{item.browser}}</td>
+                                    <td >{{item.visits}}</td>
+                                    <td >{{item.purchases}}</td>
+                                    <td >{{item.percent}}</td>
+                                </tr>
+                            </tbody>-->
+                        </table>
+                    </div>
+                </div>
             </div>
 
-
+            <!--<h3 class="with-line">Material</h3>-->
+          
 
         </div>
     </div>

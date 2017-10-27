@@ -16,10 +16,24 @@
 
     
 
-      $scope.viewBreakdown = function (id) {
-          
-          $state.go('main.constructfy.breakdown', { divisionId: id });
-         // $state.go('main.constructfy.breakdown');
+      /*
+        costfor     section summary   tower/block
+      1. primiliries    x                x
+      2.site works      yes              x
+      3.External        yes              x
+      4.other areas     yes              yes
+      */
+      $scope.viewDetails = function (id) {
+
+          if (id==1)
+          {
+              $state.go('main.constructfy.breakdown', { divisionId: id });
+          }
+          else {
+              $state.go('main.constructfy.sectionSummary', { divisionId: id });
+          }
+         
+         
       };
   }
 })();

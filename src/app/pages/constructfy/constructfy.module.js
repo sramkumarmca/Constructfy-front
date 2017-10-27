@@ -9,7 +9,8 @@
       'BlurAdmin.pages.constructfy.createProject',
       'BlurAdmin.pages.constructfy.viewProject',
       'BlurAdmin.pages.constructfy.billOfQty',
-      'BlurAdmin.pages.constructfy.breakdown'
+      'BlurAdmin.pages.constructfy.breakdown',
+      'BlurAdmin.pages.constructfy.sectionSummary'
       //'BlurAdmin.pages.components.timeline',
       //'BlurAdmin.pages.components.tree',
     ])

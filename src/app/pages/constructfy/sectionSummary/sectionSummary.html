@@ -1,0 +1,77 @@
+<div class="row">
+    <div class="col-md-12"
+         ba-panel
+         ba-panel-title="Section Summary"
+         ba-panel-class="with-scroll">
+
+        <div class="add-row-editable-table">
+            <button class="btn btn-primary" ng-click="addUser()">Add row</button>
+        </div>
+        <table class="table table-bordered table-hover table-condensed">
+            <tr>
+                <td></td>
+                <td>Description</td>
+                <td>Amount</td>
+                <td>Subsection Amount</td>
+                <td>Start Date</td>
+                <td>End Date</td>
+                <td>Actions</td>
+            </tr>
+            <tr ng-repeat="user in users" class="editable-row">
+                <td>
+                    {{$index}}
+                </td>
+                <td>
+                    <span editable-text="user.name" e-name="name" e-form="rowform" e-required>
+                        {{ user.name || 'empty' }}
+                    </span>
+                </td>
+                <td>
+                    <span editable-text="user.name" e-name="name" e-form="rowform" e-required>
+                        {{ user.name || 'empty' }}
+                    </span>
+                </td>
+                <td>
+                    <span editable-text="user.name" e-name="name" e-form="rowform" e-required style="background-color:red">
+                        {{ user.name || 'empty' }}
+                    </span>
+                </td>
+                <td>
+                    start date
+                </td>
+                <td>
+                    end date
+                </td>
+        
+                <td>
+                    <form editable-form name="rowform" ng-show="rowform.$visible" class="form-buttons form-inline"
+                          shown="inserted == user">
+                        <button type="submit" ng-disabled="rowform.$waiting" class="btn btn-primary editable-table-button btn-xs">
+                            Save
+                        </button>
+                        <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="btn btn-default editable-table-button btn-xs">
+                            Cancel
+                        </button>
+                    </form>
+                    <div class="buttons" ng-show="!rowform.$visible">
+                        <button class="btn btn-primary editable-table-button btn-xs" ng-click="rowform.$show()">Edit</button>
+                        <button class="btn btn-warning editable-table-button btn-xs" ng-click="viewBreakdown($index)">Breakdown</button>
+                        <button class="btn btn-danger editable-table-button btn-xs" ng-click="removeUser($index)">Delete</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>Total:20000</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+
+
+    </div>
+</div>

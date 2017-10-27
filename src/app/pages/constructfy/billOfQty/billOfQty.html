@@ -12,6 +12,7 @@
                     <td></td>
                     <td>Description</td>
                     <td>Amount</td>
+                    <td>Breakdown Amount</td>
                     <td>Start Date</td>
                     <td>End Date</td>
                     <td>Cost For</td>
@@ -31,6 +32,11 @@
                             {{ user.name || 'empty' }}
                         </span>
                     </td>
+                    <td>
+                        <span editable-text="user.name" e-name="name" e-form="rowform" e-required style="background-color:red">
+                            {{ user.name || 'empty' }}
+                        </span>
+                    </td>
                     <td >
                       start date
                     </td>
@@ -47,7 +53,8 @@
                         <select class="form-control">
                             <option>Primiliries</option>
                             <option>Site Works</option>
-                            <option>Sub Structure/Super Structure</option>
+                            <option>External</option>
+                            <option>Other Areas</option>
                         </select>
                     </td>
                     <td>
@@ -62,7 +69,7 @@
                         </form>
                         <div class="buttons" ng-show="!rowform.$visible">
                             <button class="btn btn-primary editable-table-button btn-xs" ng-click="rowform.$show()">Edit</button>
-                            <button class="btn btn-warning editable-table-button btn-xs" ng-click="viewBreakdown($index)">Breakdown</button>
+                            <button class="btn btn-warning editable-table-button btn-xs" ng-click="viewDetails($index)">Details</button>
                             <button class="btn btn-danger editable-table-button btn-xs" ng-click="removeUser($index)">Delete</button>
                         </div>
                     </td>
