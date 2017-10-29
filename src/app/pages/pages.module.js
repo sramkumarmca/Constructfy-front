@@ -40,7 +40,13 @@
               icon: 'ion-gear-a',
               stateRef: 'main.constructfy.viewProject',
               blank: false
-          }
+          },
+            {
+                title: 'Reports',
+                icon: 'ion-gear-a',
+                stateRef: 'main.constructfy.reports',
+                blank: false
+            }
       );
 
 
