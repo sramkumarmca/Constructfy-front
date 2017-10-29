@@ -43,7 +43,7 @@
           },
             {
                 title: 'Reports',
-                icon: 'ion-gear-a',
+                icon: 'ion-stats-bars',
                 stateRef: 'main.constructfy.reports',
                 blank: false
             }
