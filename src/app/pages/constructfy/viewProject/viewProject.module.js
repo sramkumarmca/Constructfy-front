@@ -15,12 +15,12 @@
           url: '/viewProject',
           templateUrl: 'app/pages/constructfy/viewProject/viewProject.html',
           controller: 'viewProjectCtrl',
-          title: 'View Project',
+          title: 'Projects',
         sidebarMeta: {
           icon: 'ion-ios-pulse',
           order: 100,
         },
-        constructfy: true,
+       // constructfy: true,
         authenticate: true
       });
   }

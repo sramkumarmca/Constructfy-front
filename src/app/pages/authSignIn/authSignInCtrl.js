@@ -22,7 +22,7 @@
         passWord: vm.passWord
       };
       localStorage.setObject('dataUser', dadosUser);
-      $state.go('main.dashboard');
+      $state.go('main.constructfy.viewProject');
     }
 
 

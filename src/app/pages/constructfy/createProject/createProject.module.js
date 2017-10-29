@@ -20,7 +20,7 @@
           icon: 'ion-ios-pulse',
           order: 100,
         },
-        constructfy: true,
+       // constructfy: true,
         authenticate: true
       });
   }

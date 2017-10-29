@@ -26,8 +26,27 @@
 
   /** @ngInject */
   function routeConfig($urlRouterProvider, baSidebarServiceProvider) {
-    $urlRouterProvider.otherwise('/authSignIn');
+      $urlRouterProvider.otherwise('/authSignIn');
 
+      baSidebarServiceProvider.addStaticItem(
+          {
+          title: 'Dashboard',
+          icon: 'ion-android-home',
+          stateRef: 'main.dashboard',
+          blank: false
+          },
+            {
+              title: 'Costing',
+              icon: 'ion-gear-a',
+              stateRef: 'main.constructfy.viewProject',
+              blank: false
+          }
+      );
+
+
+
+
+      /*
     baSidebarServiceProvider.addStaticItem({
       title: 'Pages',
       icon: 'ion-document',
@@ -62,6 +81,9 @@
         }]
       }]
     });
+
+      */
+
   }
 
 })();

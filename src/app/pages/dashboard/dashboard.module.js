@@ -19,7 +19,7 @@
           icon: 'ion-android-home',
           order: 0,
         },
-        constructfy: true,
+       // constructfy: true,
         authenticate: true
       });
   }

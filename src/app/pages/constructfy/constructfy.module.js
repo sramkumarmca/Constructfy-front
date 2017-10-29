@@ -28,7 +28,7 @@
           icon: 'ion-gear-a',
           order: 100,
         },
-        constructfy:true,
+      //  constructfy:true,
         authenticate: true
       });
   }
